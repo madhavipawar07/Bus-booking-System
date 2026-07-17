@@ -4,10 +4,6 @@
 
 A cloud-based online bus reservation system where users can search buses, book seats, and manage reservations and get email confirmation after a successful booking
 
-## Live Demo
-
-65.2.74.101
-
 ## Features
 
 - Search buses
