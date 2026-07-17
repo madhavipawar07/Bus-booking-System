@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Buses</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-bus"></i>
+        Bus Booking
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/">Search Again</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<section class="booking-page">
+
+<h1 class="page-title">Available Buses</h1>
+
+{% if buses %}
+
+<div class="bus-grid">
+
+{% for bus in buses %}
+
+<div class="bus-card">
+
+<h2>{{ bus.name }}</h2>
+
+<p><strong>Bus Number:</strong> {{ bus.number }}</p>
+
+<p><strong>Source:</strong> {{ bus.source }}</p>
+
+<p><strong>Destination:</strong> {{ bus.destination }}</p>
+
+<p><strong>Departure:</strong> {{ bus.departure }}</p>
+
+<p><strong>Arrival:</strong> {{ bus.arrival }}</p>
+
+<p><strong>Available Seats:</strong>
+
+<span class="seat">{{ bus.seats }}</span>
+
+</p>
+
+<p class="fare">
+
+₹ {{ bus.fare }}
+
+</p>
+
+<button
+class="book-btn"
+onclick="openModal(
+'{{ bus.name }}',
+'{{ bus.fare }}'
+)">
+
+Book Now
+
+</button>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% else %}
+
+<div class="no-bus">
+
+<h2>
+
+No buses found for this route.
+
+</h2>
+
+<a href="/" class="hero-btn">
+
+Search Again
+
+</a>
+
+</div>
+
+{% endif %}
+
+</section>
+
+<!-- ================= BOOKING MODAL ================= -->
+
+<div id="bookingModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">
+
+&times;
+
+</span>
+
+<h2>Confirm Your Booking</h2>
+
+<form action="/book" method="POST">
+
+<input
+type="hidden"
+id="busname"
+name="busname">
+
+<input
+type="text"
+name="name"
+placeholder="Passenger Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+required>
+
+<input
+type="tel"
+name="phone"
+placeholder="Phone Number"
+required>
+
+<input
+type="number"
+name="seat"
+placeholder="Seat Number"
+required>
+
+<button type="submit">
+
+Confirm Booking
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- ================= SUCCESS MODAL ================= -->
+
+{% if success %}
+
+<div id="successModal" class="success-modal">
+
+<div class="success-box">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h2>
+
+Booking Successful!
+
+</h2>
+
+<p>
+
+Your ticket has been booked successfully.
+
+</p>
+
+<p>
+
+A confirmation email has been sent.
+
+</p>
+
+<a href="/" class="hero-btn">
+
+Back to Home
+
+</a>
+
+</div>
+
+</div>
+
+{% endif %}
+
+<footer>
+
+<p>
+
+© 2026 Bus Booking System
+
+</p>
+
+</footer>
+
+<script>
+
+function openModal(bus,fare){
+
+document.getElementById("bookingModal").style.display="flex";
+
+document.getElementById("busname").value=bus;
+
+}
+
+function closeModal(){
+
+document.getElementById("bookingModal").style.display="none";
+
+}
+
+window.onclick=function(event){
+
+const modal=document.getElementById("bookingModal");
+
+if(event.target==modal){
+
+modal.style.display="none";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

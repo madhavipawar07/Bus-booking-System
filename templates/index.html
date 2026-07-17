@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-bus"></i>
+        Bus Booking
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="#search">Search Bus</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="overlay">
+
+        <div class="hero-content">
+
+            <h1>Book Your Bus Ticket Online</h1>
+
+            <p>Fast • Secure • Comfortable</p>
+
+            <a href="#search" class="hero-btn">Book Now</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SEARCH ================= -->
+
+<section id="search" class="search-section">
+
+    <div class="glass-card">
+
+        <h2>Search Your Bus</h2>
+
+        <form action="/search" method="POST">
+
+            <div class="grid">
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Passenger Name"
+                    required>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required>
+
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required>
+<select name="source" required>
+    <option value="">Select Source</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Pune">Pune</option>
+    <option value="Nashik">Nashik</option>
+    <option value="Nagpur">Nagpur</option>
+</select>
+
+<select name="destination" required>
+    <option value="">Select Destination</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Pune">Pune</option>
+    <option value="Nashik">Nashik</option>
+    <option value="Nagpur">Nagpur</option>
+</select>
+
+                <input
+                    type="date"
+                    name="date"
+                    required>
+
+                <input
+                    type="number"
+                    name="passengers"
+                    placeholder="Passengers"
+                    min="1"
+                    max="10">
+
+            </div>
+
+            <button type="submit">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                Search Bus
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <h2>Why Choose Us?</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-ticket"></i>
+
+            <h3>Easy Booking</h3>
+
+            <p>Book tickets within seconds.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <h3>Secure Payment</h3>
+
+            <p>Safe online transactions.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chair"></i>
+
+            <h3>Live Seat Availability</h3>
+
+            <p>Real-time seat updates.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h3>Instant Confirmation</h3>
+
+            <p>Receive booking instantly.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-headset"></i>
+
+            <h3>24×7 Support</h3>
+
+            <p>Customer support anytime.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="footer-container">
+
+        <div>
+
+            <h3>About</h3>
+
+            <p>
+
+                Book bus tickets securely and travel comfortably across India.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>Email : support@busbooking.com</p>
+
+            <p>Phone : +91 9876543210</p>
+
+        </div>
+
+        <div>
+
+            <h3>Follow Us</h3>
+
+            <div class="social">
+
+                <i class="fab fa-facebook"></i>
+
+                <i class="fab fa-instagram"></i>
+
+                <i class="fab fa-twitter"></i>
+
+                <i class="fab fa-linkedin"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <p class="copy">
+
+        © 2026 Bus Booking System | All Rights Reserved
+
+    </p>
+
+</footer>
+
+</body>
+</html>
