@@ -56,10 +56,11 @@ SNS
 
 <img width="1915" height="917" alt="image" src="https://github.com/user-attachments/assets/cf3ccbec-a006-438b-b850-b002090a038a" />
 
+<img width="1917" height="882" alt="image" src="https://github.com/user-attachments/assets/706367d1-01ba-4675-b355-0e01087bad93" />
 
-<img width="1918" height="967" alt="Screenshot 2026-07-16 235649" src="https://github.com/user-attachments/assets/83188834-2a57-425e-95ed-e3012d0d5d9b" />
+<img width="1917" height="922" alt="image" src="https://github.com/user-attachments/assets/9c78bab6-1496-405c-a2e5-0bb09b69e7ec" />
 
-<img width="1917" height="982" alt="Screenshot 2026-07-16 235926" src="https://github.com/user-attachments/assets/d7feee99-2cc9-4150-bbe1-4a0c44e6969a" />
+<img width="1080" height="1534" alt="image" src="https://github.com/user-attachments/assets/7993effc-0969-4113-8368-0ef59787c7c2" />
 
 <img width="1917" height="897" alt="image" src="https://github.com/user-attachments/assets/d6d04755-14d1-480e-96ef-e3d58998d88e" />
 
