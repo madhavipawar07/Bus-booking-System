@@ -58,7 +58,8 @@ SNS
 
 ## Output
 
-<img width="1918" height="967" alt="Screenshot 2026-07-16 235557" src="https://github.com/user-attachments/assets/04e78021-c029-4774-83f6-6d929e222bed" />
+<img width="1915" height="917" alt="image" src="https://github.com/user-attachments/assets/cf3ccbec-a006-438b-b850-b002090a038a" />
+
 
 <img width="1918" height="967" alt="Screenshot 2026-07-16 235649" src="https://github.com/user-attachments/assets/83188834-2a57-425e-95ed-e3012d0d5d9b" />
 
